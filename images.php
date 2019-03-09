@@ -42,7 +42,7 @@
         return $this->name=$newName;
     }
     function setSize($newSize){
-        return $this->size=$newsize;
+        return $this->size=$newSize;
     }
     function setSource($newSource){
         return $this->source=$newSource;

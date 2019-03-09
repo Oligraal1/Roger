@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accueil-Roger Harle</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Montserrat|Rochester" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Croissant+One|Montserrat|Rochester" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
         crossorigin="anonymous">
     <!-- Librairie jQuery -->
@@ -15,7 +15,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="backg">
+<body class="backg kenburns-bottom">
     <header>
         
 
@@ -24,12 +24,5 @@
             <h2 class="container conatiner-mobile">Photographe de rue</h2>
             <div class="hide admin"><a href="admin.php">Administration</a></div>
         </div>
-        <nav class="container container-mobile">
-            <ul>
-                <li><a href="index.php"><i class="fas fa-home"></i></a></li>
-                <li><a href="displayImage.php?action=couleur">Couleur</a></li>
-                <li><a href="displayImage.php?action=nb">Noir & Blanc</a></li>
-                <li><a href="contact.php">Contactez-moi</a></li>
-            </ul>
-        </nav>
+        <?php include 'nav.php';?>
     </header>

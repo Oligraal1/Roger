@@ -3,8 +3,10 @@
     <button class="buttonSlider avant"><i class="fas fa-backward"></i></button>
 
     <a class="figureSlider" href="">
-        <figcaption>Jeune fille en bleu ecrivant sur un mur</figcaption>
-        <img class="image boxshadow" src="img/1c.jpg" alt="jeune fille en bleu ecrivant sur un mur">
+        <figcaption><?=$picRandAlt?></figcaption>
+        <img class="picture boxshadow" src=<?=$picRandSource?> alt=
+                <?=$picRandAlt?>>
+                <button class="play"><i class="far fa-play-circle"></i></button>
     </a>
     <button class="buttonSlider apres"><i class="fas fa-forward"></i></button>
 </div>

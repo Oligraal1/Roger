@@ -5,10 +5,11 @@ var apres = document.querySelector(".apres");
 var avant = document.querySelector(".avant");
 var joue = document.querySelector(".figureSlider");
 console.log(joue);
-var image = document.querySelector(".image");
+var image = document.querySelector(".picture");
 console.log(image);
 var figcaption = document.querySelector("figcaption");
 console.log(figcaption);
+var playBtn = document.querySelector(".play");
 //image.src;
 //image.src = $.getJSON("displayImage.php",function(){console.log(image.src)});
 
@@ -60,7 +61,9 @@ function ClickOnPlay(e) {
     e.preventDefault();
     if (lecture == false){
         lecture = true;
-        chrono = setInterval(ClickOnAleatoire, 1500);
+       
+        $(this).fadeIn();
+        chrono = setInterval(ClickOnAleatoire, 2500);
       //  degres = -degres;
    // image.style.transform = "rotate("+degres+"deg)";
     }
@@ -81,6 +84,18 @@ function OnKeyPress(event){
         ClickOnPlay();
     }
 }
+
+
+
+$(".picture").mouseover(function() {
+    $(".play").fadeOut(2500, function() {
+        console.log("Olivette");
+        $(this).remove();
+});
+    console.log("Olivia");
+   
+})
+
 apres.addEventListener("click", clickOnAfter);
 avant.addEventListener("click", clickOnBefore);
 //aleatoire.addEventListener("click", ClickOnAleatoire);

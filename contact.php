@@ -1,11 +1,10 @@
 <?php
-include "mainImages.php";
-
+include "mainController.php";
 include "header.php";
 ?>
 <main>
     <div  class="container container-mobile">
-    <h3>Ecrivez moi</h3>
+    <h3>Ecrivez-moi</h3>
     <form class="contact" action="mail.php?action=addContact" method="post">
         <fieldset>
             <div>
@@ -20,24 +19,10 @@ include "header.php";
             <label for="question">Quelle est votre question ?</label>
             <textarea id="question" name="question" cols="30" rows="10"></textarea>
             </div>
-            <button type="submit" id="contactButton">Envoyer <i class="fas fa-dove"></i></button>
+            <button type="submit" id="contactButton">Envoyer <i class="fas fa-dove rotateOutUpRight"></i></button>
         </fieldset>
     </form>
-    <div class="thanks">
-   
-    </div>
-    <div class="hidePic">
-    <?php 
-        foreach ($pictureRandom as $picture) :
-    $picRandSource=$picture->getSource();
-    $picRandAlt=$picture->getAlt(); ?>
-        <img class='pic boxshadow' src=<?=$picRandSource?> alt=<?=$picRandAlt?> > 
-    <?php endforeach ?>
-    </div>
-    </div>
-   
-   
-        
+    </div>    
 </main>
 <?php
 include "footer.php";

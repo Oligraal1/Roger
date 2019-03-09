@@ -7,6 +7,7 @@ require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 
+
 /*******GERE LA PAGE index.php */
 $randomPic=new BDD;
 $pictureRandom=$randomPic->randomPicture();
@@ -43,20 +44,23 @@ $ContactList=new BDD;
 
 if(isset($_GET["action"])){
     if($_GET['action']=='addContact'){
-if(!empty($_POST["email"])){
-    $creationDate=time();
-             $ContactList->insertContact($_POST["name"],$_POST["email"],$_POST["question"],$creationDate);
-            
- 
-         $lastInsertId= $ContactList->lastId();
+        if(!empty($_POST["email"])){
+            $creationDate = time();
+            $ContactList->insertContact($_POST["name"],$_POST["email"],$_POST["question"],$creationDate);
 
-        // echo json_encode($lastInsertId);
+            $lastInsertId= $ContactList->lastId();
+            
+            //echo $lastInsertId;
+         //echo json_encode($lastInsertId);
          
         } 
         /*GERE l'envoi du message par mail */  
 if(!empty($_POST["question"])){
     // je crée une instance de la classe PHPMailer    
     $mail = new PHPMailer(true);
+   // $mailList= new BDD;
+ //   $mailLastId=$mailList->lastId();
+   // var_dump($mailLastId);
 
   try {
 
@@ -91,8 +95,8 @@ if(!empty($_POST["question"])){
  
 
       $mail->send();
-      echo 'Message has been sent';
-      header('Location: mail.php?success=true');
+     // echo 'Message has been sent';
+     // header('Location: mail.php');
   } catch (Exception $e) {
       echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
   }      
