@@ -22,7 +22,7 @@ foreach ($allPictures as $picture):
                 <a class='images' href="bigImage.php?id=<?=$pictureId?>">
                     <img class='boxshadow image blur' src=<?=$pictureSource?> alt=
                     <?=$pictureAlt?> ></a>
-                <figcaption class="toBigImg">Cliquez pour en savoir plus.</figcaption>
+                <figcaption class="toBigImg">Cliquez pour agrandir.</figcaption>
             </figure>
 
             <?php endif;
@@ -48,7 +48,7 @@ foreach ($allPictures as $picture) :
                     <img class='boxshadow image blur' src=<?=$pictureSource?> alt=
                     <?=$pictureAlt?> >
 
-                    <figcaption class="toBigImg">Cliquez pour en savoir plus.</figcaption>
+                    <figcaption class="toBigImg">Cliquez pour agrandir.</figcaption>
                 </a>
             </figure>
             <?php endif ?>

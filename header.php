@@ -20,7 +20,7 @@
         
 
         <div>
-            <h1 class="container conatiner-mobile">Roger Harle</h1>
+            <h1 class="container conatiner-mobile"><a href="index.php?action=index">Roger Harle</a></h1>
             <h2 class="container conatiner-mobile">Photographe de rue</h2>
             <div class="hide admin"><a href="admin.php">Administration</a></div>
         </div>

@@ -17,8 +17,8 @@ $idImage=$_GET["id"];
             <a href="displayImage.php?action=<?=$pictureType?>"><i class="fas fa-undo"></i> Retour à la page précédente</a>
             <img class='bigImg boxshadow scale-in-center' src=<?=$pictureSource?> alt=
             <?=$pictureAlt?> >
-            <button class="btLike"><a href="#1"><i id=<?=$pictureId?> class="like fas fa-heart"></i></a></button>
-            <p id="1"><a href="contact.php?action=contact">Si cette photo vous intéresse, contactez-moi pour les tarifs ou pour tout autre information. <i class="far fa-envelope"></i></a></p>
+            <button class="btLike"><a href="#1"><i id=<?=$pictureId?> class="like fas fa-heart"></i>    J'aime</a></button>
+            <p id="1"><a href="contact.php?action=contact">Si cette photo vous intéresse, contactez-moi pour les tarifs ou pour toute autre information. <i class="far fa-envelope"></i></a></p>
             <a href="displayImage.php?action=<?=$pictureType?>"><i class="fas fa-undo"></i> Retour</a>
             <?php endif;
     endforeach; ?>
